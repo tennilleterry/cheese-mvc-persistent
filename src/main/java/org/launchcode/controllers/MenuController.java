@@ -37,7 +37,6 @@ public class MenuController {
 
         model.addAttribute("title", "Add Menu");
         model.addAttribute(new Menu());
-        //model.addAttribute("menus", menuDao.findAll());
         return "menu/add";
 
     }
@@ -76,6 +75,8 @@ public class MenuController {
         return "menu/add-item";
     }
 
+
+    //Adds the cheese item to menu
     @RequestMapping(value="add-item", method = RequestMethod.POST)
     public String addItem(Model model,
                           @ModelAttribute @Valid AddMenuItemForm form, Errors errors){
